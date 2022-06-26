@@ -159,8 +159,6 @@
     padding-bottom: 80px;
   }
   &__info {
-    position: relative;
-    max-width: 1000px;
     text-align: center;
     margin: 0 auto;
   }
@@ -169,6 +167,10 @@
   }
   &__text {
     margin-bottom: 60px;
+  }
+  &__ghost {
+    top: 38px;
+    left: 50%;
   }
   &__items {
     display: flex;
@@ -221,11 +223,12 @@
       letter-spacing: 1px;
       font-size: 30px;
     }
-    &-text {
-    }
   }
 }
-
+.info {
+  position: relative;
+  max-width: 1000px;
+}
 .sub {
   display: inline-block;
   position: relative;
@@ -261,8 +264,6 @@
   @include f700;
   letter-spacing: 3px;
   width: 100%;
-  top: 38px;
-  left: 50%;
   transform: translate(-50%);
   opacity: 0.1;
   z-index: -1;
@@ -306,6 +307,81 @@
   }
 }
 // end advantages
+
+// start choise
+.choise {
+  &__inner {
+    padding: 100px 0;
+  }
+  &__info {
+    max-width: 700px;
+  }
+  &__sub {
+    margin-bottom: 10px;
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__ghost {
+    top: 33px;
+    left: 50%;
+  }
+  &__text {
+    margin-bottom: 60px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    flex-wrap: wrap;
+  }
+  &__item {
+    border: 1px solid #f8f8f8;
+    &.sale {
+      .choise__item-price--disable {
+        display: block;
+      }
+    }
+    &-image {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      img {
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    &-title {
+      color: #000;
+      font-size: 22px;
+      margin: 0 20px 10px;
+    }
+    &-price {
+      display: flex;
+      font-size: 22px;
+      margin: 0 20px 20px;
+      color: $blueDark;
+      &--disable {
+        display: none;
+        margin-right: 10px;
+        position: relative;
+        opacity: 0.3;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: $blueDark;
+          top: 10px;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+// end choise
 
 // animation
 @keyframes hoverEffect {
