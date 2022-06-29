@@ -6,6 +6,16 @@ html {
 *::after {
     box-sizing: inherit;
 }
+* {
+    &::selection {
+        background-color: $blueDark;
+        color: #fff;
+    }
+    &::-moz-selection {
+        background-color: $blueDark;
+        color: #fff;
+    }
+}
 html,
 body {
     height: 100%;
