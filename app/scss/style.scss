@@ -782,6 +782,51 @@
 }
 // end subscribe
 
+// start breadcrumbs
+.breadcrumbs {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__inner {
+    padding: 300px 0 100px 0;
+  }
+  &__title {
+    font-size: 80px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  &__list {
+    li,
+    a,
+    span {
+      @include f300;
+      font-size: 26px;
+      color: #fff;
+      letter-spacing: 3px;
+      display: inline-block;
+    }
+    li + li {
+      margin-left: 15px;
+    }
+    a {
+      position: relative;
+      padding-right: 15px;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(225deg);
+      }
+    }
+  }
+}
+// end breadcrumbs
+
 // start footer
 .footer {
   background-color: #030e1e;
