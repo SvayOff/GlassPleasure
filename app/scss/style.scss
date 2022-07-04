@@ -69,6 +69,7 @@
     bottom: 0;
     right: 15%;
     height: 600px;
+    animation: zoom 15000ms infinite ease-in;
   }
   .model-3 {
     top: 10px;
@@ -1297,10 +1298,210 @@
     font-size: 22px;
     margin-bottom: 20px;
   }
-  &__rate {
-  }
 }
 // end feedback-carrousel
+
+// start solver
+.solver {
+  padding: 80px 0;
+  margin-bottom: 200px;
+  .container {
+    padding: 0;
+  }
+  &__inner {
+    position: relative;
+    padding: 80px 0 280px;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-size: 40px;
+    @include f400;
+  }
+  &__text {
+    @include f300;
+    color: #222;
+    max-width: 800px;
+    width: 100%;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px;
+    padding: 20px;
+    background-color: #fff;
+  }
+  &__item {
+    display: flex;
+    padding: 30px;
+    &-img {
+      margin-right: 20px;
+      align-self: flex-start;
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    &-info {
+      font-size: 20px;
+    }
+    &-title {
+      margin-bottom: 10px;
+    }
+    &-text {
+      @include f300;
+      color: #222;
+      line-height: 30px;
+    }
+  }
+  &__img {
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translate(-50%);
+    img {
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+// end solver
+
+// start feedbacks
+.feedbacks {
+  &__inner {
+    margin-bottom: 140px;
+  }
+  &__sub {
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__content {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .slick-arrow {
+    top: 150px;
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    svg {
+      width: 30px;
+      height: 30px;
+      path {
+        fill: #7a7f87;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  .slick-arrow:hover {
+    path {
+      fill: #979ca4;
+    }
+  }
+  .slick-arrow.slick-prev {
+    left: 270px;
+  }
+  .slick-arrow.slick-next {
+    right: 270px;
+  }
+  &__item {
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    background-color: #fbfbfb;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px 0px rgb(0 0 0 / 8%);
+  }
+  &__image {
+    display: block;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+  }
+  &__feedback {
+    color: #4b4b4b;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  &__name {
+    color: #616875;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+// end feedbacks
+
+// start stat
+.stat {
+  &__inner {
+    padding: 50px 25px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-start;
+  }
+  &__item {
+    position: relative;
+    padding: 30px;
+    text-align: center;
+    max-width: 340px;
+    width: 100%;
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      right: -0px;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: #fff;
+    }
+    &-image {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 10px;
+    }
+    &-value {
+      font-size: 60px;
+      @include f500;
+      letter-spacing: 1px;
+    }
+    &-title {
+      font-size: 22px;
+      letter-spacing: 3px;
+    }
+  }
+}
+// end stat
 
 // start footer
 .footer {
@@ -1402,6 +1603,12 @@
   }
 }
 @keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
 }
 
 // media
