@@ -4,6 +4,10 @@
 
 // start header
 .header {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  background-color: #fff;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -35,6 +39,7 @@
     align-items: center;
     height: 80px;
     padding-top: 40px;
+    margin-right: 15px;
     li {
       height: 100%;
     }
@@ -100,6 +105,53 @@
       }
     }
   }
+  &__burger {
+    display: none;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    &.active {
+      span {
+        background-color: transparent;
+        &::before {
+          transform: rotate(135deg);
+          top: 0;
+        }
+        &::after {
+          bottom: 0;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+    span {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 3px;
+      width: 100%;
+      background-color: #000;
+      transition: all 0.3s ease;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        height: 3px;
+        transition: all 0.3s ease;
+      }
+      &::before {
+        top: 10px;
+        left: 0;
+      }
+      &::after {
+        bottom: 10px;
+        left: 0;
+      }
+    }
+  }
 }
 
 // end header
@@ -107,6 +159,7 @@
 // start slider
 .slider {
   padding: 0 10px 80px;
+  margin-top: 115px;
   &__item {
     position: relative;
     height: 600px;

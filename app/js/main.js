@@ -29,6 +29,8 @@ $(function () {
 
 });
 
+
+// accordeon
 let tab = function () {
   let tabNav = document.querySelectorAll('.tabs__nav-item');
   let tabContent = document.querySelectorAll('.tabs__content-tab');
@@ -57,4 +59,28 @@ let tab = function () {
 };
 
 tab();
+
+
+// burger
+let burger = document.querySelector('.header__burger');
+let menu = document.querySelector('.header__menu');
+
+burger.addEventListener('click', clickToggle);
+
+function clickToggle(e) {
+  burger.classList.toggle('active');
+  menu.classList.toggle('active');
+}
+
+//drop-downs
+let dropDowns = document.querySelectorAll('.header__drop-down.drop-down');
+for (let i = 0; i < dropDowns.length; i++) {
+  let dropDown = dropDowns[i];
+
+  dropDown.addEventListener('click', dropClick);
+
+  function dropClick(e) {
+    dropDown.classList.toggle('active');
+  }
+}
 
