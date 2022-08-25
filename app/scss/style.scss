@@ -1777,13 +1777,13 @@
     margin-bottom: 40px;
   }
   &__content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 60px;
   }
   &__item {
-    width: 650px;
+    max-width: 650px;
+    width: 100%;
     height: 240px;
     background-position: center;
     background-size: cover;
