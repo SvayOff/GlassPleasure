@@ -84,3 +84,33 @@ for (let i = 0; i < dropDowns.length; i++) {
   }
 }
 
+// copy to header
+/* const header = document.querySelector('#header');
+const linkCopy = document.querySelector('.footer__copy-link');
+
+linkCopy.addEventListener('click', toHeader);
+
+function toHeader(e) {
+  e.preventDefault();
+  linkCopy.scrollIntoView({
+    block: 'center',
+    behavior: 'smooth',
+  })
+
+
+} */
+
+const header = document.getElementById("header");
+const link = document.querySelector('.footer__copy-link');
+
+function handleButtonClick() {
+  header.scrollIntoView({
+    block: "center",
+    behavior: "smooth"
+  });
+}
+
+link.addEventListener('click', handleButtonClick);
+
+
+
