@@ -103,6 +103,8 @@ function toHeader(e) {
 const header = document.getElementById("header");
 const link = document.querySelector('.footer__copy-link');
 
+link.addEventListener('click', handleButtonClick);
+
 function handleButtonClick() {
   header.scrollIntoView({
     block: "center",
@@ -110,7 +112,7 @@ function handleButtonClick() {
   });
 }
 
-link.addEventListener('click', handleButtonClick);
+
 
 
 

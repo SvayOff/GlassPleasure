@@ -70,6 +70,9 @@
   .subscribe__info {
     width: 600px;
   }
+  .categories__item-btn.btn {
+    width: 140px;
+  }
 }
 @media (max-width: 1000px) {
   .special__title.title {
@@ -133,6 +136,41 @@
   }
   .footer__col + .footer__col {
     margin-left: 0;
+  }
+  .categories__sidebar {
+    max-width: 200px;
+  }
+  .categories__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .categories__item-title {
+    font-size: 25px;
+    padding: 0 20px;
+  }
+  .categories__item-text {
+    font-size: 20px;
+    padding: 0 20px;
+    line-height: 25px;
+  }
+  .categories__item-btn.btn {
+    padding: 10px 5px;
+  }
+  .categories__item-other {
+    padding: 0 20px;
+  }
+  .categories__item-date {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    &::after {
+      display: none;
+    }
+  }
+  .categories__item {
+    width: 100%;
+    margin-bottom: 60px;
+    border-bottom: 1px dotted #e2e2e2;
+    padding-bottom: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -376,6 +414,33 @@
   .footer__inner {
     grid-template-columns: repeat(2, 1fr);
   }
+  .categories__content {
+    margin-right: 30px;
+  }
+  .categories__sidebar {
+    margin-right: 0px;
+  }
+  .categories__form {
+    margin: 0px 0 40px 0;
+  }
+  .categories__input {
+    height: 45px;
+  }
+  .categories__col + .categories__col {
+    margin-top: 40px;
+  }
+  .categories__col-topic {
+    font-size: 18px;
+  }
+  .categories__col-title {
+    font-size: 18px;
+  }
+  .categories__col-date {
+    font-size: 16px;
+  }
+  .categories__col-sub.sub {
+    font-size: 20px;
+  }
 }
 @media (max-width: 620px) {
   .title {
@@ -494,6 +559,39 @@
     margin-bottom: -10px;
     margin-left: 50%;
     transform: translate(-50%);
+  }
+  .categories__sidebar {
+    max-width: 140px;
+  }
+  .categories__item-title {
+    font-size: 23px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .categories__item-text {
+    font-size: 18px;
+    padding: 0;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+  .categories__item-other {
+    padding: 0;
+  }
+  .categories__item-btn.btn {
+    font-size: 17px;
+    margin-right: 0;
+    padding: 8px 5px;
+  }
+  .categories__item-date {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  .categories__item {
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+  }
+  .categories__item-image {
+    margin-bottom: 15px;
   }
 }
 @media (max-width: 480px) {
@@ -706,6 +804,20 @@
   }
   .blog__items {
     padding-top: 130px;
+  }
+  .categories__inner {
+    display: block;
+  }
+  .categories__sidebar {
+    max-width: 100%;
+  }
+  .categories__form {
+    margin: 0px 0 15px 0;
+  }
+  .categories__content {
+    margin-right: 0;
+    margin-bottom: 40px;
+    border-bottom: 5px double $blueDark;
   }
 }
 
