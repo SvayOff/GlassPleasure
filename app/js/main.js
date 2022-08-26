@@ -98,22 +98,19 @@ for (let i = 0; i < dropDowns.length; i++) {
   }
 }
 
-// copy to header
-/* const header = document.querySelector('#header');
-const linkCopy = document.querySelector('.footer__copy-link');
+//drop-down account
+let dropAccountMenu = document.querySelector('.account__drop-down');
+let listAccountMenu = document.querySelector('.account__change');
 
-linkCopy.addEventListener('click', toHeader);
+dropAccountMenu.addEventListener('click', dropAccClick);
 
-function toHeader(e) {
-  e.preventDefault();
-  linkCopy.scrollIntoView({
-    block: 'center',
-    behavior: 'smooth',
-  })
+function dropAccClick(e) {
+  dropAccountMenu.classList.toggle('active');
+  listAccountMenu.classList.toggle('active');
+}
 
 
-} */
-
+// 
 const header = document.getElementById("header");
 const link = document.querySelector('.footer__copy-link');
 

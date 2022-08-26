@@ -1927,6 +1927,7 @@
     letter-spacing: 0.1em;
     line-height: 0;
     text-transform: uppercase;
+    margin-top: 120px;
   }
 }
 // end account-crumb
@@ -1958,6 +1959,7 @@
     align-items: center;
     margin-bottom: 30px;
     letter-spacing: 3px;
+    margin-right: 20px;
     &:hover .account__name {
       color: rgba($color: #000000, $alpha: 0.6);
     }
@@ -1973,11 +1975,43 @@
       border-radius: 50%;
     }
   }
-  &__name {
+  &__info {
     margin-left: 30px;
+  }
+  &__name {
     font-size: 28px;
     color: #000;
     transition: color 0.3s ease;
+    margin-bottom: 5px;
+  }
+  &__balance {
+    font-size: 22px;
+    letter-spacing: 1px;
+    span {
+      @include f500;
+    }
+  }
+  &__drop-down {
+    position: relative;
+    background-color: rgb(227, 224, 224);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: none;
+    cursor: pointer;
+    border: 1px solid #000;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      border: solid #000;
+      border-width: 0 2px 2px 0;
+      padding: 3px;
+      transform: rotate(45deg);
+      transition: all 0.3s ease;
+    }
   }
   &__change {
     font-size: 26px;
@@ -1990,7 +2024,7 @@
       }
     }
   }
-  &__item {
+  &__item-link {
     margin-top: 10px;
   }
   &__content {
@@ -2000,7 +2034,81 @@
       margin-top: 10px;
       font-size: 50px;
       text-align: center;
+      margin-bottom: 30px;
     }
+  }
+  &__statistic {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+    margin-bottom: 30px;
+    &-col + &-col {
+      margin-left: 30px;
+    }
+    &-title {
+      font-size: 36px;
+    }
+    span {
+      font-size: 28px;
+      color: $grey;
+    }
+  }
+  &__goods {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__item {
+    position: relative;
+    width: auto;
+    border: 2px solid #f8f8f8;
+    filter: saturate(0);
+    &-image {
+      height: 200px;
+      width: 100%;
+      user-select: none;
+    }
+    &-image img {
+      object-fit: cover;
+      width: 100%;
+      height: 250px;
+    }
+    &.sale {
+      .shop__item-price--disable {
+        display: block;
+      }
+    }
+    &-title {
+      color: $blueDark;
+      font-size: 36px;
+      margin: 0 20px 10px;
+    }
+    &-price {
+      display: flex;
+      font-size: 28px;
+      margin: 0 20px 20px;
+      color: $blueDark;
+      &--disable {
+        display: none;
+        margin-right: 10px;
+        position: relative;
+        opacity: 0.3;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: $blueDark;
+          top: 10px;
+          left: 0;
+        }
+      }
+    }
+  }
+  .pagination__inner {
+    margin-bottom: 0px;
+    margin-top: 50px;
   }
 }
 // end account

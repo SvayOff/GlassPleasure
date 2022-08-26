@@ -84,6 +84,10 @@
     max-width: 600px;
     padding: 25px;
   }
+  .account__goods {
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 1000px) {
   .special__title.title {
@@ -231,6 +235,18 @@
   }
   .shop__item-image img {
     height: 200px;
+  }
+  .account__statistic {
+    justify-content: space-between;
+  }
+  .account__item-image img {
+    height: 200px;
+  }
+  .account__info {
+    margin-left: 20px;
+  }
+  .account__bar {
+    margin-right: 15px;
   }
 }
 @media (max-width: 768px) {
@@ -682,6 +698,21 @@
   .cart__title {
     margin-bottom: 30px;
   }
+  .account__statistic {
+    display: block;
+  }
+  .account__statistic-col + .account__statistic-col {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .account__goods {
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .account__content-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 620px) {
   .title {
@@ -1124,6 +1155,52 @@
   .cart__info-price,
   .cart__info-goods {
     margin-right: 0;
+  }
+  .account__inner {
+    display: block;
+  }
+  .account__bar {
+    width: 100%;
+    margin-right: 0px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .account__user {
+    justify-content: center;
+    margin-bottom: 0px;
+    &:hover .account__name {
+      color: rgba($color: #000000, $alpha: 1);
+    }
+  }
+  .account__name {
+    font-size: 24px;
+  }
+  .account__balance {
+    font-size: 20px;
+  }
+  .account__info {
+    margin-left: 15px;
+  }
+  .account__bar::after {
+    display: none;
+  }
+  .account__drop-down {
+    display: block;
+  }
+  .account__drop-down.active::before {
+    transform: rotate(225deg);
+  }
+  .account__change {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  .account__change.active {
+    height: 150px;
+    overflow: visible;
+    opacity: 1;
   }
 }
 
