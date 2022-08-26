@@ -18,7 +18,21 @@ $(function () {
     dots: false,
     arrows: false,
     autoplay: 1,
-    ariableWidth: true
+    ariableWidth: true,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 621,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
   });
   $('.feedbacks__content').slick({
     slidesToShow: 1,
