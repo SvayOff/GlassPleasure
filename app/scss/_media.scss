@@ -229,6 +229,9 @@
   .looking__inner {
     padding: 60px 40px;
   }
+  .shop__item-image img {
+    height: 200px;
+  }
 }
 @media (max-width: 768px) {
   .header__menu {
@@ -635,6 +638,16 @@
   .testimonials-carrousel__inner {
     padding: 60px 0;
   }
+  .shop__goods {
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .shop__form-search {
+    width: 350px;
+  }
+  .shop__inner {
+    padding: 60px 0;
+  }
 }
 @media (max-width: 620px) {
   .title {
@@ -829,6 +842,19 @@
   }
   .testimonials-carrousel__item {
     max-width: 100%;
+  }
+  .shop__form {
+    flex-wrap: wrap;
+  }
+  .shop__form-search {
+    margin-left: 0;
+    margin-bottom: 15px;
+    width: 100%;
+    order: -1;
+  }
+  .shop__title {
+    font-size: 50px;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 480px) {
@@ -1038,6 +1064,19 @@
   .about__desc-text {
     font-size: 16px;
     line-height: 18px;
+  }
+  .shop__goods {
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .pagination__btn {
+    font-size: 18px;
+    padding: 8px 18px;
+  }
+  .shop__title {
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1em;
   }
 }
 
