@@ -110,19 +110,6 @@ function dropAccClick(e) {
 }
 
 
-// 
-const header = document.getElementById("header");
-const link = document.querySelector('.footer__copy-link');
-
-link.addEventListener('click', handleButtonClick);
-
-function handleButtonClick() {
-  header.scrollIntoView({
-    block: "center",
-    behavior: "smooth"
-  });
-}
-
 
 
 
