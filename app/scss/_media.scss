@@ -246,6 +246,7 @@
     min-width: 200px;
     overflow: hidden;
     top: 115px;
+    pointer-events: none;
     > li {
       position: relative;
       padding-bottom: 5px;
@@ -264,6 +265,7 @@
       margin-left: 0;
     }
   }
+
   .header__burger {
     display: block;
     position: relative;
@@ -282,11 +284,13 @@
     height: auto;
     padding: 20px 30px;
     transition: all 0.5s ease;
+    pointer-events: inherit;
     li + li {
       margin-top: 20px;
       margin-left: 0;
     }
   }
+
   .header__menu .drop-down__list {
     position: inherit;
     top: 0;
@@ -304,7 +308,27 @@
     height: 0;
     transition: all 0.5s ease;
   }
+  .header__drop-down.drop-down {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 5px;
+      top: 2px;
+      border: solid #000;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 2px;
+      transform: rotate(45deg);
+      transition: all 0.3s;
+    }
+  }
   .header__drop-down.drop-down.active {
+    &::before {
+      right: 5px;
+      top: 2px;
+      transform: rotate(220deg);
+    }
     .drop-down__list {
       top: 0;
       opacity: 1;
