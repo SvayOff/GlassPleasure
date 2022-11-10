@@ -1,5 +1,5 @@
-##GlassPleasure
-#Multi-page shop for buying glasses
+## GlassPleasure
+# Multi-page shop for buying glasses
 - Glasses shop - here you can choose glasses for your style. [See for yourself](https://svayoff.github.io/GlassPleasure/).
 - The site uses 4 main colors
 - Multi-page site - shop
